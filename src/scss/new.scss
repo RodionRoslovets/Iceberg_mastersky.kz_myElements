@@ -1,0 +1,118 @@
+.masters{
+    &__heading{
+        text-align:center;
+    }
+    &__master{
+        & img{
+            width:100%;
+        }
+        .master-name{
+            text-align:center;
+        }
+    }    
+}
+
+.feedback{
+    &__heading, &__description{
+        @extend .masters__heading
+    }
+}
+
+.delivery{
+    &__heading, &__description{
+        @extend .masters__heading
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    & img{
+        width:20%;
+        @media screen and (max-width:768px){
+            width: 100%;
+        }
+    }
+    & .row__arrow{
+        width: 15%;
+        @media screen and (max-width:768px) {
+            transform:rotate(90deg);
+        }
+    }
+}
+.contacts{
+    &__contacts, &__map{
+        width:100%;
+    }
+    &__heading, &__description{
+        @extend .masters__heading
+    }
+}
+#desktop{
+    @media screen and (max-width:991px){
+        display:none;
+    }
+}
+.menu{
+    background-color:#191919;
+    padding:10px 20px;
+    position:relative;
+}
+.main-menu{
+    &__item{
+        padding:10px;
+        list-style: none;
+        transition: all .1s linear;
+        & a{
+            color:white;
+            text-transform: uppercase;
+        }
+        &:hover{
+            background-color:lighten(#191919, 10%);
+        }
+    }
+}
+.sub-menu{
+    width:1150px;
+    padding:10px;
+    position:absolute;
+    top:100%;
+    left: -416px;
+    background-color:#191919;
+    display: none;
+    z-index: 99999;
+    &__item{
+        color:white;
+        text-transform: uppercase;
+        &:hover{
+            color:darken(#ffffff, 10%);
+        }
+    }
+    &__visible{
+        display:block;
+    }
+    @media screen and (max-width:1200px){
+        width:950px;
+        left: -350px;
+    }
+}
+.tech-name{
+    padding-left:10px;
+    &__brand{
+        list-style: none;
+        & a{
+            color:white;
+            text-transform: none;
+        }
+    }
+}
+/* Стили для встроеного меню шаблона */
+#horizontal-menu{
+    display: none;
+    @media screen and (max-width:991px) {
+        display:block;
+    }
+}
