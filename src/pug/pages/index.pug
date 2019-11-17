@@ -708,6 +708,13 @@ html(lang="en")
 														a(href=brand.href) #{brand.name}
 						li.main-menu__item.col-lg-4.col-md-4.col-sm-4
 							a(href="#") О нас
+		//Кнопки звонка
+		.container
+			a.mob-button__call(href="tel:+77788701335") Позвонить мастеру
+			a.mob-button__whatsapp(href="https://api.whatsapp.com/send?phone=77051994569&amp") Написать мастеру в whatsapp
+			.inline-buttons
+				a.mob-button__call(href="tel:+77788701335") Позвонить мастеру
+				a.mob-button__whatsapp(href="https://api.whatsapp.com/send?phone=77051994569&amp") Написать мастеру в whatsapp
 		//Мастера
 		.container.masters
 			//- div(id="carousel")
@@ -775,5 +782,6 @@ html(lang="en")
 				p.contacts__description ул. Карасай Батыра 185 (между Ауэзова и Жарокова)
 			.contacts__map.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4090c4a7507d38be26fcc8b63c752f46db44fe10d420324f3f26be62925dfa55&amp;source=constructor" width="100%" height="300" frameborder="0")
+		
 		script(src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous")
 		script(src="./assets/static/Jq/slick.min.js")

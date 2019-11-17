@@ -116,3 +116,36 @@
         display:block;
     }
 }
+
+/*Стили для кнопок */
+
+.mob-button__call{
+    background:#55acee;
+    border-radius: 4px;
+    padding:10px;    
+    text-align: center;
+    display: none;
+    flex-grow:1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        color:#fff;
+        outline: none;
+    }
+    @media screen and (max-width:768px) {
+        display:block;
+    }
+}
+.mob-button__whatsapp{
+    @extend .mob-button__call;
+    background: #43d854;
+}
+
+.inline-buttons{
+    display:flex;
+    justify-content: space-between;
+}
