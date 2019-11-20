@@ -1,5 +1,6 @@
 block variables
-	- var masters = ['Мастер1','Мастер2','Мастер3','Мастер4']
+	- var masters = [{name:'Мастер1',href:'https://mastersky.kz/image/catalog/2018-08-02_15-37-25-600x300.jpg'},{name:'Мастер2',href:'https://mastersky.kz/image/catalog/C13_6765-600x300.jpg'},{name:'Мастер3',href:'https://mastersky.kz/image/catalog/C13_6804-600x300.jpg'},{name:'Мастер4',href:'https://mastersky.kz/image/catalog/C13_6823-2-e1536579199923-600x300.jpg'},{name:'Мастер5',href:'https://mastersky.kz/image/catalog/C13_6919-1-e1536578048596-600x300.jpg'},{name:'Мастер6',href:'https://mastersky.kz/image/catalog/Антон-600x300.jpg'}]
+	- var letters = [{href:'https://mastersky.kz/image/catalog/-Агропродукт-.jpeg-e1536042432480.jpeg'}, {href:'https://mastersky.kz/image/catalog/-Копа-Италия-e1536042458702.jpeg'}, {href:'https://mastersky.kz/image/catalog/-Метрополитен-e1536042483787.jpeg'}, {href:'https://mastersky.kz/image/catalog/-письмо-e1536042521647.jpeg'}]
 	- var tech = [
 	-	{
 	-		name:'Телевизоры',
@@ -751,20 +752,19 @@ html(lang="en")
 			h3.masters__heading Наши мастера проведут диагностику СОВЕРШЕННО БЕСПЛАТНО!
 			.row
 				each val in masters
-					.col-lg-3.col-md-3.col-sm-6.col-xs-12
+					.col-lg-2.col-md-2.col-sm-6.col-xs-12
 						.masters__master
-							img(src='https://mastersky.kz/image/catalog/Screenshot_2.png' alt="")
-							.master-name #{val}
+							img(src=val.href alt="")
+							.master-name #{val.name}
 		//Отзывы
 		.container.feedback
 			h3.feedback__heading Отзывы о нашей работе
 			p.feedback__description С 2007 года заслужили множество благодарственных писем от известных компаний города Алматы,
 				|( По вашему запросу готовы предоставить контакты для получения более точной информации о нашей работе)
 			.row
-				- var i = 0
-				- for(i = 0; i< 3;i++)
-					.col-lg-4.col-md-4.col-sm-6.col-xs-12
-						img(src='https://mastersky.kz/image/catalog/-письмо-e1536042521647.jpeg' alt="")
+				each el in letters
+					.col-lg-3.col-md-3.col-sm-6.col-xs-12
+						img(src=el.href alt="")
 		//Доставка
 		.container.delivery
 			h3.delivery__heading Все для Вашего удобства

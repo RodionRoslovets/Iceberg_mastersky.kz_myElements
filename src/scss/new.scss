@@ -1,3 +1,6 @@
+body{
+    overflow-x:hidden;
+}
 .masters{
     &__heading{
         text-align:center;
@@ -15,6 +18,9 @@
 .feedback{
     &__heading, &__description{
         @extend .masters__heading
+    }
+    & img{
+        width:100%;
     }
 }
 
@@ -148,4 +154,31 @@
 .inline-buttons{
     display:flex;
     justify-content: space-between;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    z-index:99999;
 }
+/*Сдвигаем хлебные крошки*/
+.breadcrumb{
+    margin-top: 5px;
+    @media screen and (min-width:992px) {
+        margin-top: 65px;
+    }
+}
+/*Настройки слайдера*/
+
+
+    .slick-track{
+        display: flex;
+        align-items: center;
+    }
+    .slick-slide{
+        transform: scale(0.8);
+        transition: all .5s linear;
+        opacity: .5;
+    }    
+    .slick-center{
+    	transform:scale(1);
+        opacity:1;
+    }
