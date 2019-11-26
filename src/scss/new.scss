@@ -1,6 +1,9 @@
 body{
     overflow-x:hidden;
 }
+*{
+    box-sizing: border-box;
+}
 .masters{
     &__heading{
         text-align:center;
@@ -68,15 +71,19 @@ body{
     background-color:#191919;
     position:relative;
 }
+
 .main-menu{
     padding:0;
     margin:0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     &__item{
         list-style: none;
         transition: all .1s linear;
-        flex-grow:1;
+        flex-grow:.1;
+        &__big{
+            padding:10px 0;
+        }
         &:nth-child(2){
             display:flex;
             justify-content: center;
@@ -176,22 +183,208 @@ body{
 /*Сдвигаем хлебные крошки*/
 .breadcrumb{
     margin-top: 5px;
-    @media screen and (min-width:992px) {
-        margin-top: 65px;
-    }
 }
 /*Настройки слайдера*/
 
-.slick-track{
-    display: flex;
-    align-items: center;
+.mySlide{
+    & img{
+        margin:0 20px;
+    }
+    & .slick-track{
+        display: flex;
+        align-items: center;
+    }
+    & .slick-slide{
+        transform: scale(0.8);
+        transition: all .5s linear;
+        opacity: .5;
+    }    
+    & .slick-center{
+        transform:scale(1);
+        opacity:1;
+    }
 }
-.slick-slide{
-    transform: scale(0.8);
-    transition: all .5s linear;
-    opacity: .5;
-}    
-.slick-center{
-	transform:scale(1);
-    opacity:1;
+
+/* Стили формы */
+.popupButton{
+    &__button{
+        width:100%;
+        height:42px;
+        margin-bottom:15px;
+        color:#fff;
+        background:#2B8CDB;
+        border:none;
+        border-radius:3px;
+        &:active,
+        &:focus,
+        &:hover{
+            background:#1475C4;
+            outline:none;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+        }
+    }
+}
+
+.popupForm{    
+    position: absolute;
+    width:calc(20% + 250px);
+    height:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    &__block{
+        position: fixed;
+        background:rgba(0,0,0, .5);
+        opacity:1;
+        width:100%;
+        height:100%;
+        top:0;
+        z-index:999999;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        transition:all .1s linear;
+        &__hidden{
+            display:none;            
+        }
+        &__zeroOpacity{
+            opacity:0;
+        }
+    }
+    &__form{
+        display:flex;
+        flex-direction: column;
+        & .form__field{
+            border:1px solid rgba(39, 39, 39, .25);
+            border-radius:5px;
+            padding:5px;
+            margin-bottom: 10px;
+            transition:all .1s linear;
+            &:focus{
+                border-color:rgba(39, 39, 39, 1);
+                outline:none;
+            }
+        }
+        & .form__submit{
+            border-radius:5px;
+            color:#fff;
+            transition:all .1s linear;
+            background:#1475C4;
+            border:1px solid #1475C4;
+            &:focus{
+                outline:none;
+            }
+            &:active{
+                border-color:darken(#1475C4, 10%);
+                box-shadow: inset 5px 5px 10px 1px darken(#1475C4, 10%);
+            }
+        }
+    }
+    & .popupForm__heading{
+        margin:0;
+    }
+    & .closePopup{
+        width:20px;
+        height:20px;
+        position:absolute;
+        top:5px;
+        right:10px;
+        font-size:20px;
+        line-height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        border:1px solid black;
+        border-radius:50%;
+        cursor:pointer;
+    }
+}
+
+/* Popup изображния в крусели с письмами */
+
+.popupImg{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.5);
+    z-index:9999999;
+}
+.popupImg img{
+    width:35%;
+}
+.popupImg__hidden{
+    display:none;
+}
+@media screen and (max-width:768px){
+    .popupImg img{
+    width:100%;
+}
+}
+
+/* меню категорий */
+.block{
+    width:300px;
+}
+.category-menu{
+    background:#fff;
+    &__heading{
+        background:#2B8CDB;
+        color:#fff;
+        text-transform: uppercase;
+        text-align: center;
+        margin:0;
+        padding:20px 0;
+        font-size: 14px;
+        font-weight:bold;
+        border-radius:4px 4px 0 0;
+    }
+    &__list{
+        padding:0;
+        margin:0;
+        list-style: none;
+        background:#fff;        
+        border:1px solid #c4bdbd;
+        &-item{
+            position: relative;
+            cursor:pointer;
+            padding:10px;
+            border-bottom:1px solid #c4bdbd;
+            &:hover{
+                background:linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,.05));
+            }
+            & a{
+                text-decoration: none;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:hover > .category-menu__subcategory{
+                display:block;
+            }
+        }
+    }
+    &__subcategory{
+        position: absolute;;
+        left:100%;
+        top:0;
+        display:none;
+        width: 100%;
+        z-index:999999;
+    }
+}
+.subcategory{
+    @extend .category-menu__list;
+    border:1px solid #c4bdbd;
+    border-radius: 0 4px 4px 0;
+    box-shadow:black 2px 2px 15px 0px;
+    &:hover{
+        box-shadow:black 2px 2px 15px 0px;
+    }
+    &-item{
+        @extend .category-menu__list-item
+    }
 }

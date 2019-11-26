@@ -30,3 +30,4 @@ $('.mySlide, .feedback-letters').slick({
       }
     ]
   });
+

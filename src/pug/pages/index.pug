@@ -708,7 +708,7 @@ html(lang="en")
 													li.tech-name__brand 
 														a(href=brand.href) #{brand.name}
 						li.main-menu__item
-							a(href="#") О нас
+							a(href="https://mastersky.kz/about-us") О нас
 		//Кнопки звонка
 		.container
 			a.mob-button__call(href="tel:+77788701335") Позвонить мастеру
@@ -783,10 +783,42 @@ html(lang="en")
 			.contacts__map.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4090c4a7507d38be26fcc8b63c752f46db44fe10d420324f3f26be62925dfa55&amp;source=constructor" width="100%" height="300" frameborder="0")
 		//Форма
-		.popupForm
-			form(action="#")
-				input(type="text" name="name")
-				input(type="text" name="email")
-				input(type="submit")
+		.popupButton
+			button.popupButton__button Заказать звонок
+		.popupForm__block.popupForm__block__hidden.popupForm__block__zeroOpacity
+			.popupForm
+				.closePopup ×
+				h3.popupForm__heading Отправьте заявку и мы Вам перезвоним
+				form.popupForm__form(action="#")
+					input.form__field(type="text" name="name" placeholder="Имя")
+					input.form__field(type="text" name="email" placeholder="Email")
+					input.form__field(type="text" name="phone" placeholder="Телефон")
+					input.form__submit(type="submit")
+				.statusField
+		//Popup картинки в карусели с письмами
+		#popupImg.popupImg.popupImg__hidden
+			img(src='#')
+		//Меню категории для каждой техники (боковое)
+		.block
+			.category-menu
+				h3.category-menu__heading Телевизоры
+				ul.category-menu__list
+					each el in tech[0].brands
+						li.category-menu__list-item
+							a(href=el.href) Ремонт телевизоров #{el.name}
+							.category-menu__subcategory
+								ul.subcategory
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} не включается
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} пропал звук
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} слетела прошивка
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} нет изображения
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} полосы по экрану
+									li.subcategory-item
+										a(href="#") Телевизор #{el.name} искажение картинки
 		script(src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous")
 		script(src="./assets/static/Jq/slick.min.js")
