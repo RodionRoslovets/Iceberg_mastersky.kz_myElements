@@ -388,3 +388,23 @@ body{
         @extend .category-menu__list-item
     }
 }
+
+/* отступ для поиска на мобильной*/
+.box-search {
+    @media screen and (max-width:768px) {
+        margin-bottom: 50px;        
+    }
+}
+
+/* Меню брендов */
+
+.brands{
+    & img{
+        width:100%;
+    }
+}
+
+/*Скрыть меню с блогом и входом пользователя*/
+#top{
+    display:none;
+}

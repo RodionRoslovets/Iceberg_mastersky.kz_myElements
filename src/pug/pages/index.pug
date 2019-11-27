@@ -783,7 +783,7 @@ html(lang="en")
 			.contacts__map.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4090c4a7507d38be26fcc8b63c752f46db44fe10d420324f3f26be62925dfa55&amp;source=constructor" width="100%" height="300" frameborder="0")
 		//Форма
-		.popupButton
+		.popupButton.col-xs-12.col-md-3.col-md-offset-4
 			button.popupButton__button Заказать звонок
 		.popupForm__block.popupForm__block__hidden.popupForm__block__zeroOpacity
 			.popupForm
@@ -820,5 +820,12 @@ html(lang="en")
 										a(href="#") Телевизор #{el.name} полосы по экрану
 									li.subcategory-item
 										a(href="#") Телевизор #{el.name} искажение картинки
+		//Блоки меню
+		.brands
+			.row
+				each el in tech[0].brands
+					.col-lg-2.col-md-2.col-sm-6.col-xs-6
+						a(href=el.href)
+							img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
 		script(src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous")
 		script(src="./assets/static/Jq/slick.min.js")
