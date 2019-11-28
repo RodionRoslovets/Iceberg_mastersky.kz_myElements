@@ -1,5 +1,6 @@
 import './scss/new.scss';
 import './js/menu';
+import './js/sideMenu';
 window.addEventListener('DOMContentLoaded', function(){
     //Отправка формы
 let form = document.querySelectorAll('.popupForm__form')[0],

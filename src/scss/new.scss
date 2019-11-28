@@ -4,6 +4,10 @@ body{
 *{
     box-sizing: border-box;
 }
+h1, h2, h3, h4, h5, h6, .title-module{
+    text-align: center;
+    text-transform: uppercase;
+}
 .masters{
     &__heading{
         text-align:center;
@@ -399,8 +403,28 @@ body{
 /* Меню брендов */
 
 .brands{
+    padding:0;
     & img{
         width:100%;
+        padding: 0 5px;
+    }    
+}
+.brand{
+    padding:5px;
+    &__wrapper{
+        margin:5px;
+        border:1px solid #edeef2;
+        border-radius:5px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1), 2px 2px 2px #edeef2 inset;
+        & a:hover{
+            text-decoration: none;
+        }
+    }
+    &__description {
+        margin:0;
+        background:#edeef2;
+        color:#23a1d1;
+        text-align: center;
     }
 }
 
