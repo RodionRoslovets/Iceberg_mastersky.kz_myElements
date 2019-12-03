@@ -63,7 +63,7 @@ form.addEventListener('submit', function(event){
 });
 
 //показ и скрытие формы
-let showPopupBtn = document.querySelectorAll('.popupButton')[0],
+let showPopupBtn = document.querySelectorAll('.popupButton'),
     popupBlock = document.querySelectorAll('.popupForm__block')[0],
     closePopupButton = document.querySelectorAll('.closePopup')[0];
 
@@ -96,7 +96,10 @@ function hidePopup(){
         }, 100);
     });
 }
-showPopupBtn.addEventListener('click', showPopup);
+
+showPopupBtn.forEach(el=>{
+    el.addEventListener('click', showPopup);
+});
 
 closePopupButton.addEventListener('click', hidePopup);
 
