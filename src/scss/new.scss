@@ -432,3 +432,39 @@ h1, h2, h3, h4, h5, h6, .title-module{
 #top{
     display:none;
 }
+/* Блок с неисправностями телевизоров */
+.failures{
+    margin:20px 0;
+    display:flex;
+    justify-content: center;
+    @media screen and (max-width:768px){
+        flex-direction:column;
+    }
+}
+.failure-description{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+}
+.failure-img__item{
+    width:100%;
+    &.failure-img__item__hidden{
+        display: none;
+    }
+}
+.failure-item{
+    padding:10px 10px;
+    border:1px solid #2b8cdb;
+    border-radius:5px;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: all .2s linear;
+    text-align: center;
+}
+
+.failure-item__active{
+    color:#fff;
+    background: #1475c4;
+    border-color:#1475c4;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
