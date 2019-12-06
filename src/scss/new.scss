@@ -453,8 +453,9 @@ h1, h2, h3, h4, h5, h6, .title-module{
     }
 }
 .failure-item{
-    padding:10px 10px;
-    border:1px solid #2b8cdb;
+    padding:20px 10px;
+    border:1px solid #ccc;
+    background:#ccc;
     border-radius:5px;
     text-transform: uppercase;
     cursor:pointer;
@@ -463,8 +464,7 @@ h1, h2, h3, h4, h5, h6, .title-module{
 }
 
 .failure-item__active{
-    color:#fff;
-    background: #1475c4;
+    color:#000;
+    background: #fff;
     border-color:#1475c4;
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
