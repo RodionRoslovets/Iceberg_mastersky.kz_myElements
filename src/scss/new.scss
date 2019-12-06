@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6, .title-module{
 }
 .failure-item{
     padding:20px 10px;
-    border:1px solid #ccc;
+    border:1px solid darken( #ccc, 10%);
     background:#ccc;
     border-radius:5px;
     text-transform: uppercase;

@@ -761,13 +761,21 @@ block variables
 	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-electrolux/'
 	-				},
 	-				{
-	-					name:'Bosch',
-	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-bosch/'
+	-					name:'Hubert',
+	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-hubert/'
 	-				},
 	-				{
-	-					name:'Delonghi',
-	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-delonghi/'
+	-					name:'Kiturami',
+	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-kiturami/'
 	-				},
+	-				{
+	-					name:'Navien',
+	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-navien/'
+	-				},
+	-				{
+	-					name:'Rinnai',
+	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B3%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BE%D1%82%D0%BB%D0%BE%D0%B2-rinnai/'
+	-				}
 	-			]
 	-	},
 	-	{
@@ -1357,6 +1365,22 @@ html(lang="en")
 					each el in tech[2].brands
 						li.category-menu__list-item
 							a(href=el.href) Ремонт посудомоек #{el.name}
+		//Меню категории для кофемашин (боковое)
+		.block
+			.category-menu
+				h3.category-menu__heading Кофемашины
+				ul.category-menu__list
+					each el in tech[3].brands
+						li.category-menu__list-item
+							a(href=el.href) Ремонт кофемашин #{el.name}
+		//Меню категории для газовых котлов (боковое)
+		.block
+			.category-menu
+				h3.category-menu__heading Газовые котлы
+				ul.category-menu__list
+					each el in tech[4].brands
+						li.category-menu__list-item
+							a(href=el.href) Ремонт газовых котлов #{el.name}
 		//Блоки брендов телеков
 		.brands
 			.row
@@ -1394,6 +1418,32 @@ html(lang="en")
 								img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
 								p.brand__description
 									|Ремонт посудомоек
+									br
+									|#{el.name}
+		//Блоки брендов кофемашин
+		.brands
+			.row
+				h3.brands__heading Мы работаем со всеми брендами кофемашин
+				each el in tech[3].brands
+					.brand.col-lg-2.col-md-2.col-sm-6.col-xs-6
+						.brand__wrapper
+							a(href=el.href)
+								img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
+								p.brand__description
+									|Ремонт кофемашин
+									br
+									|#{el.name}
+		//Блоки брендов газовых котлов
+		.brands
+			.row
+				h3.brands__heading Мы работаем со всеми брендами газовых котлов
+				each el in tech[4].brands
+					.brand.col-lg-2.col-md-2.col-sm-6.col-xs-6
+						.brand__wrapper
+							a(href=el.href)
+								img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
+								p.brand__description
+									|Ремонт газовых котлов
 									br
 									|#{el.name}
 		//Блок меню с неисправностями
