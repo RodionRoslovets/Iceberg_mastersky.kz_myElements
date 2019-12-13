@@ -907,6 +907,10 @@ block variables
 	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-vitek/'
 	-				},
 	-				{
+	-					name:'Vestel',
+	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-vestel/'
+	-				},
+	-				{
 	-					name:'Zanussi',
 	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-zanussi/'
 	-				},
@@ -1381,6 +1385,14 @@ html(lang="en")
 					each el in tech[4].brands
 						li.category-menu__list-item
 							a(href=el.href) Ремонт газовых котлов #{el.name}
+		//Меню категории для холодильников (боковое)
+		.block
+			.category-menu
+				h3.category-menu__heading Холодильники
+				ul.category-menu__list
+					each el in tech[5].brands
+						li.category-menu__list-item
+							a(href=el.href) Ремонт холодильников #{el.name}
 		//Блоки брендов телеков
 		.brands
 			.row
@@ -1444,6 +1456,19 @@ html(lang="en")
 								img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
 								p.brand__description
 									|Ремонт газовых котлов
+									br
+									|#{el.name}
+		//Блоки брендов холодильников
+		.brands
+			.row
+				h3.brands__heading Мы работаем со всеми брендами холодильников
+				each el in tech[5].brands
+					.brand.col-lg-2.col-md-2.col-sm-6.col-xs-6
+						.brand__wrapper
+							a(href=el.href)
+								img(src="https://mastersky.kz/image/catalog/brands/"+el.name+".png")
+								p.brand__description
+									|Ремонт холодильников
 									br
 									|#{el.name}
 		//Блок меню с неисправностями
