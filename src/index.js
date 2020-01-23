@@ -122,3 +122,7 @@ let sliderImage = document.querySelectorAll('.feedback-letters img'),
 		});
 });
 
+//Поменяли кнопку подписки
+let subscrBtn = document.querySelector('.newsletter button#subcribe');
+
+subscrBtn.innerHTML = '<i class="fa fa-envelope fa-fw"></i>Написать директору';

@@ -1304,6 +1304,9 @@ html(lang="en")
 		link(rel="stylesheet" href="/assets/static/css/slick.css")
 		title Iceberg
 	body
+		//кнопка подписки
+		.newsletter
+			button#subscribe
 		//Меню
 		.container
 			nav#desktop
@@ -1333,11 +1336,27 @@ html(lang="en")
 				a.mob-button__whatsapp(href="https://api.whatsapp.com/send?phone=77051994569&amp") Написать мастеру в whatsapp
 		//Мастера
 		.container.masters
-			h3.masters__heading Наши мастера проведут диагностику СОВЕРШЕННО БЕСПЛАТНО!
+			h3.masters__heading Наши мастера быстро выявят неисправность!
+			.masters__description
+				img.masters__img(src="https://mastersky.kz/image/catalog/chronometer-green.png", alt="")
+				p.masters__text Благодаря самым современным методам диагностики, специалисты СЦ Айсберг быстро выявят неисправность					 
 			.row
 				.mySlide
 					each val in masters
 						img(src=val.href alt="")
+			h3.masters__heading 90% неисправностей устраняются в день обращения!
+			.masters__description
+				img.masters__img(src="https://mastersky.kz/image/catalog/right-green.png", alt="")
+				p.masters__text Так как многие неисправности являются типовыми, огромный опыт наших мастеров позволяет устранять их в день обращения	
+			h3.masters__heading Мы делаем все для Вашего удобства!
+			.masters__description
+				img.masters__img(src="https://mastersky.kz/image/catalog/express-delivery-green.png", alt="")
+				p.masters__text В нашем сервисном центре существует правило - комфорт клиента превыше всего! Поэтому мы решили что доставка неисправной техники будет для Вас бесплатной!	
+			.masters__delivery
+				img(src="https://mastersky.kz/image/catalog/truck.png", alt="")
+			.masters__description
+				img.masters__img(src="https://mastersky.kz/image/catalog/tool-button-green.png", alt="")
+				p.masters__text Не хотите отдавать технику в сервис? Вызовите мастера на дом! Квалифицированый сотрудник приедет и проведет диганостику поломки, затем Вы примете решение о целесообразности ремонта!
 		//Отзывы
 		.container.feedback
 			h3.feedback__heading Отзывы о нашей работе
