@@ -1282,8 +1282,20 @@ block variables
 	-					href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%81%D1%82%D0%B8%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%81%D1%82%D0%B8%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD-ardo/'
 	-				}
 	-			]
+	-	}, {
+	-		name:'Фены',
+	-		href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D1%84%D0%B5%D0%BD%D0%BE%D0%B2/',
+	-		brands:[]
+	-	}, {
+	-		name:'Обогреватели',
+	-		href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BE%D0%B1%D0%BE%D0%B3%D1%80%D0%B5%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9/',
+	-		brands:[]
+	-	}, {
+	-		name:'Мелкая бытовая техника',
+	-		href:'https://mastersky.kz/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9-%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8/',
+	-		brands:[]
 	-	}
-	-]
+	- ]
 	-var failuresImg = [
 	-						{name:'Нет изображения', imgHref:'no-image-min.png'},
 	-						{name:'Нет звука', imgHref:'no-sound-min.png'},
@@ -1351,7 +1363,9 @@ html(lang="en")
 			h3.masters__heading Мы делаем все для Вашего удобства!
 			.masters__description
 				img.masters__img(src="https://mastersky.kz/image/catalog/express-delivery-green.png", alt="")
-				p.masters__text В нашем сервисном центре существует правило - комфорт клиента превыше всего! Поэтому мы решили что доставка неисправной техники будет для Вас бесплатной!	
+				p.masters__text В нашем сервисном центре существует правило - комфорт клиента превыше всего! Поэтому мы решили что доставка неисправной техники будет для Вас бесплатной!
+					br
+					span.masters__note (*Услуга доступна только для жителей города Алматы)	
 			.masters__delivery
 				img(src="https://mastersky.kz/image/catalog/truck.png", alt="")
 			.masters__description
@@ -1369,7 +1383,8 @@ html(lang="en")
 		//Доставка
 		.container.delivery
 			h3.delivery__heading Все для Вашего удобства
-			p.delivery__description Наш автомобиль заберет неисправную технику и доставит ее в наш сервисный центр АБСОЛЮТНО БЕСПЛАТНО!
+			p.delivery__description Наш автомобиль заберет неисправную технику и доставит ее в наш сервисный центр АБСОЛЮТНО БЕСПЛАТНО! 
+				span.delivery__note (*Услуга доступна только для жителей города Алматы)
 			.delivery__row
 				img(src='https://mastersky.kz/image/catalog/Picture1.png' alt="")
 				img.row__arrow(src='https://mastersky.kz/image/catalog/57116.png' alt="")
@@ -1381,6 +1396,8 @@ html(lang="en")
 			.contacts__contacts.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				h3.contacts__heading Мы находимся по адресу
 				p.contacts__description ул. Карасай Батыра 185 (между Ауэзова и Жарокова)
+			.contacts__center.col-lg-6.col-md-6.col-sm-6.col-xs-12
+				img(src="https://mastersky.kz/image/catalog/Center.jpg", alt="")
 			.contacts__map.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4090c4a7507d38be26fcc8b63c752f46db44fe10d420324f3f26be62925dfa55&amp;source=constructor" width="100%" height="300" frameborder="0")
 		//Форма

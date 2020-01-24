@@ -38,9 +38,6 @@ h1, h2, h3, h4, h5, h6, .title-module{
             width:100%;
         }
     }
-    // &__text{
-    //     flex-grow: .8;
-    // }
     &__master{
         & img{
             width:100%;
@@ -48,7 +45,10 @@ h1, h2, h3, h4, h5, h6, .title-module{
         .master-name{
             text-align:center;
         }
-    }    
+    }
+    &__note{
+        font-size:10px;
+    }
 }
 
 .feedback{
@@ -93,8 +93,19 @@ h1, h2, h3, h4, h5, h6, .title-module{
     }
 }
 .contacts{
-    &__contacts, &__map{
+    &__contacts{
         width:100%;
+        & .contacts__description{
+            margin-bottom: 60px;
+        }
+    }
+    &__center{
+        & img{
+            width:100%;
+            @media screen and (max-width:768px) {
+                margin-bottom: 20px;
+            }
+        }
     }
     &__heading, &__description{
         @extend .masters__heading
